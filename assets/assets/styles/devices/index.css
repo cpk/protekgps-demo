@@ -1,0 +1,127 @@
+.devices-container {
+    background-image: url("../../images/my_devices_back.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 1038px;
+    height: 500px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.devices-container .devices-header {
+    width: 100%;
+    min-height: 50px;
+}
+.devices-container .devices-header .title {
+    float: right;
+    width: 1058px;
+    height: 50px;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 25px;
+    color: #FFF;
+}
+.devices-container .devices-header .close {
+    background-image: url("../../images/close.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    float: right;
+    width: 50px;
+    height: 50px;
+    margin-top: 0px;
+    margin-right: -60px;
+}
+.devices-container .devices-body .toolbar {
+    font-size: 13px;
+}
+.devices-container .devices-body .toolbar .search input {
+    height: 17px;
+}
+.devices-container .devices-body .contain table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+.devices-container .devices-body .contain table img {
+    width: 53px;
+    height: 36px;
+}
+.devices-container .devices-body .contain table td{
+    border: 1.5px dashed #F3F3ED ;
+    text-align: center;
+    padding-bottom: 2px;
+    color: #A0A0A0;
+}
+.devices-container .devices-body .contain table td:nth-child(2){
+    width: 220px;
+}
+.devices-container .devices-body .contain table td:nth-child(3){
+    width: 100px;
+}
+.devices-container .devices-body .contain table td:nth-child(4){
+    width: 200px;
+}
+.devices-container .devices-body .contain table td:nth-child(5){
+    width: 250px;
+}
+.devices-container .devices-body .contain table td:nth-child(6){
+    width: 100px;
+}
+.devices-container .devices-body .contain table td:first-child {
+    width: 30px;
+}
+.devices-container .devices-body .contain table td:last-child {
+    width: 100px;
+}
+.devices-container .devices-body .contain table thead{
+    color:#FFFFFF;
+    font-size: 12px;
+    line-height: 30px;
+}
+.devices-container .devices-body .contain table thead tr{
+    height: 30px;
+    display: block;
+    border: 2px solid #F3F3ED;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    background-color: #02194f;
+}
+.devices-container .devices-body .contain table thead th:nth-child(2){
+    width: 220px;
+}
+.devices-container .devices-body .contain table thead th:nth-child(3){
+    width: 100px;
+}
+.devices-container .devices-body .contain table thead th:nth-child(4){
+    width: 200px;
+}
+.devices-container .devices-body .contain table thead th:nth-child(5){
+    width: 250px;
+}
+.devices-container .devices-body .contain table thead th:nth-child(6){
+    width: 100px;
+}
+.devices-container .devices-body .contain table td:first-child {
+    width: 30px;
+}
+.devices-container .devices-body .contain table thead th:first-child{
+    width: 30px;
+}
+.devices-container .devices-body .contain table thead th:last-child{
+    width: 100px;
+}
+.devices-container .devices-body .contain table tbody{
+    display: block;
+    height: 260px;
+    overflow-y: auto;
+}
+.devices-container .devices-footer{
+    margin-top: 20px;
+    height: 30px;
+    text-align: center  ;
+}

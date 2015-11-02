@@ -1,0 +1,176 @@
+
+    <link rel="stylesheet" type="text/css"  href="assets/styles/alerts/create.css">
+
+    <div class="create-alerts-container">
+        <div class="alerts-header">
+            <div class="close button" ng-click="createAlertsFadeOut()"></div>
+            <div class="title">Add New Alerts</div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="alerts-body">
+            <div class="toolbar">
+                <div class="float-left">
+                    <span class="i-back-alerts-btn button" ng-click="backIndexAlertsFadeIn()">Back to Alert</span>
+                </div>
+                <div class="search float-right">
+                    <span class="i-search float-left button"></span>
+                    <input type="text" placeholder="Search" class="float-right"/>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="contain">
+                <table>
+                    <tr>
+                        <td colspan="3">
+                            <div class="float-left left">
+                                {{alerts.savedInstance.devices.length}} Devices
+                            </div>
+                            <div class="right">
+                                <span class="i-add-new-devices button" ng-click="listDevicesFadeIn()">Add Deivces</span>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-label">
+                            <label for="name">Alert Name <span class="required">*</span></label>
+                        </td>
+                        <td class="td-input">
+                            <input type="text" required name="name" ng-model="alerts.savedInstance.name"/>
+                        </td>
+                        <td rowspan="5" ng-show="alerts.savedInstance.type == 1">
+                            <div id="map-canvas-create-alerts" style="width: 400px; height: 180px"></div>
+                        </td>
+                    </tr>
+                    <div class="clear"></div>
+                    <tr>
+                        <td class="td-label">
+                            <label for="type">Alert Type</label>
+                        </td>
+                        <td>
+                            <select name="type" ng-model="alerts.savedInstance.type" ng-options="item.value as item.name for item in selectAlertTypes" ng-change="alertTypesChange()">
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- tr for Engine Hours -->
+                    <tr ng-if="alerts.savedInstance.type == 18">
+                        <td class="td-label">
+                            <label for="every">Every <span class="required">*</span></label>
+                        </td>
+                        <td><input type="text" required name="every" ng-model="alerts.savedInstance.every"/> (Hours)</td>
+                    </tr>
+                    <!-- tr for Geofence -->
+                    <tr ng-if="alerts.savedInstance.type == 1">
+                        <td class="td-label">
+                            <label for="geofence">Geofence</label>
+                        </td>
+                        <td>
+                            <select name="geofence" ng-options="item.id as item.name for item in selectGeofences" ng-model="alerts.savedInstance.geofence" ng-change="drawGeofenceChange()">
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- tr for Geofence -->
+                    <tr ng-if="alerts.savedInstance.type == 1">
+                        <td class="td-label">
+                            <label for="geofence">Send an Alert When</label>
+                        </td>
+                        <td>
+                            <select name="sendAlertWhen" ng-options="item.value as item.name for item in selectSendAlertWhen" ng-model="alerts.savedInstance.sendAlertWhen">
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- tr for Geofence -->
+                    <tr ng-if="alerts.savedInstance.type == 1">
+                        <td class="td-label">
+                            <label for="slotNumber">Slot Number</label>
+                        </td>
+                        <td>
+                            <select name="slotNumber" ng-model="alerts.savedInstance.slotNumber">
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- tr for Low Battery DB -->
+                    <tr ng-if="alerts.savedInstance.type == 21">
+                        <td class="td-label">
+                            <label for="voltage">Voltage <span class="required">*</span></label>
+                        </td>
+                        <td><input type="text" required name="voltage" ng-model="alerts.savedInstance.voltage"/></td>
+                    </tr>
+                    <!-- tr for Speeding -->
+                    <tr ng-if="alerts.savedInstance.type == 20">
+                        <td class="td-label">
+                            <label for="speeding">Speeding</label>
+                        </td>
+                        <td>
+                            <input type="text" name="speeding" ng-model="alerts.savedInstance.speeding"/>
+                            <select name="unit" ng-options="item.value as item.name for item in selectUnits" ng-model="alerts.savedInstance.unit">
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td-label">
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td class="map">
+
+                        </td>
+                    </tr>
+                </table>
+                <table>
+
+
+                    <tr>
+                        <td>
+                            <label for="send_type">Send Alert to: (Optional)</label>
+                        </td>
+                        <td colspan="2">
+                            <table>
+                                <tr ng-repeat="send in alerts.savedInstance.sends track by $index">
+                                    <td class="td-input">
+                                        <select name="sendType" ng-options="item.id as item.name for item in selectSendTypes" ng-model="send.sendType">
+                                        </select>
+                                    </td>
+                                    <td class="td-input"><input type="text" required name="send" ng-model="send.send"/></td>
+                                    <td class="td-input">
+                                        <select name="version" ng-options="item.value as item.name for item in selectVersion" ng-model="send.version" ng-if="send.sendType == 1">
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <span class="i-delete button" ng-click="delete($index)"></span>
+                                    </td>
+                                </tr>
+
+                                <td class="td-input"></td>
+                                <td class="td-input"></td>
+                                <td class="td-input"></td>
+                                <td></td>
+                            </table>
+                            <span class="i-add-new-anothers button" ng-click="add()">Add Anothers</span>
+                        </td>
+                    </tr>
+                    <!-- tr for Entering Sleep Mode,  Idle, Low Battery DB, Main Power Disconnect, Main Power Reconnect, Message Button, Speeding, Towing DB, Wake On Motion-->
+                    <tr ng-if="alerts.savedInstance.type == 22 || alerts.savedInstance.type == 24 || alerts.savedInstance.type == 21 || alerts.savedInstance.type == 16 || alerts.savedInstance.type == 17 || alerts.savedInstance.type == 31 || alerts.savedInstance.type == 20 || alerts.savedInstance.type == 23 || alerts.savedInstance.type == 19">
+                        <td colspan="3" class="center">
+                           <span class="required">
+                               Note: The alert will be applied to devices that trigger this event type.
+                           </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="center">
+                            <span class="cancel-btn button" ng-click="backIndexAlertsFadeIn()">Cancel</span>
+                            <span class="ok-btn button" ng-click="saveAlerts()">Ok</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>

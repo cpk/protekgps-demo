@@ -1,0 +1,99 @@
+<tr>
+    <td>First Name:<span class="red">*</span></td>
+    <td><input type="text" name="firstName" required ng-model="users.instance.firstName" /></td>
+    <td>Last Name:<span class="red">*</span></td>
+    <td><input type="text" name="lastName" ng-model="users.instance.lastName" required /></td>
+</tr>
+<tr>
+    <td>Email:<span class="red">*</span></td>
+    <td><input type="text" name="email" ng-model="users.instance.email" required /></td>
+    <td>Contract Phone:<span class="red">*</span></td>
+    <td><input type="text" name="contractPhone" ng-model="users.instance.contractPhone" required /></td>
+</tr>
+<tr>
+    <td>Date of Birth:<span class="red">*</span></td>
+    <td><input type="text" name="dateOfBirth" required ng-model="users.instance.dateOfBirth" /></td>
+    <td>Country:<span class="red">*</span></td>
+    <td>
+        <select required class="select-sort" ng-options="item.id as item.name for item in selectCountrys" ng-model="users.instance.country"></select>
+    </td>
+</tr>
+<tr>
+    <td>Street Address<span class="red">*</span></td>
+    <td colspan="3" ><input type="text" class="input-long" name="streetAddress" ng-model="users.instance.streetAddress" required /></td>
+
+</tr>
+<tr>
+    <td>City:<span class="red">*</span></td>
+    <td><input type="text" ng-model="users.instance.city" required name="city" /></td>
+    <td>State:<span class="red">*</span></td>
+    <td>
+        <select required class="select-sort" ng-options="item.id as item.name for item in selectStates" ng-model="users.instance.state"></select>
+    </td>
+</tr>
+<tr>
+    <td>Zip Code:<span class="red">*</span></td>
+    <td><input type="text" name="zipCode" ng-model="users.instance.zipCode" required /></td>
+    <td>Default Map:<span class="red">*</span></td>
+    <td>
+        <select>
+            <option> Satellite</option>
+            <option> Satellite</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td>Time Zone:<span class="red">*</span></td>
+    <td>
+        <select>
+            <option> (UTC+07:00) Bangkok, HaNoi,Jakarta</option>
+            <option> (UTC+07:00) Bangkok, HaNoi,Jakarta</option>
+        </select>
+    </td>
+    <td><label class="button" for="daylight_saving">Daylight Saving:<span class="red">*</span></label></td>
+    <td><label><input class="button" id="daylight_saving" type="checkbox" ng-model="users.instance.daylightSaving" required /></label></td>
+</tr>
+<tr>
+    <td>User role:<span class="red">*</span></td>
+    <td>
+        <select>
+            <option> BHPH (Main.)</option>
+            <option> BHPH (Main.)</option>
+        </select>
+    </td>
+    <td>Unit System:<span class="red">*</span></td>
+    <td>
+        <select>
+            <option> Imperial</option>
+            <option> Imperial</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td>Group:<span class="red">*</span></td>
+    <td>
+        <select>
+            <option> None</option>
+            <option> None</option>
+        </select>
+    </td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>Username:<span class="red">*</span></td>
+    <td><input type="text" name="userName" required ng-model="users.instance.userName"/></td>
+    <td>Time of Day Format:<span class="red">*</span></td>
+    <td>
+        <select>
+            <option> Civilian Time</option>
+            <option> Civilian Time</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td>Password:<span class="red">*</span></td>
+    <td><input type="password" name="password" ng-model="users.instance.password" required /></td>
+    <td>Confirm Password:<span class="red">*</span></td>
+    <td><input type="text" name="confirmPassword"  required /></td>
+</tr>

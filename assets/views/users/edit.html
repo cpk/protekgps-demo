@@ -1,0 +1,143 @@
+
+    <link rel="stylesheet" type="text/css" href="assets/styles/users/edit.css">
+
+<div class="edit-user-container">
+    <div class="edit-user-header">
+        <div class="close button" ng-click="editUsersFadeOut()"></div>
+        <div class="title">Edit User</div>
+    </div>
+    <div class="edit-user-body">
+        <div class="contain-menu">
+            <div class="float-left">
+                <span class="i-non-admin-btn button" ng-click="backIndexUsersFadeIn()">
+                    Back to Users
+                </span>
+            </div>
+            <div class="edit-user_rt_search">
+                <input type="text" placeholder="Search" class="float-right"/>
+                <img src="assets/images/users/search_icon.png" class="float-right" />
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="contain-report">
+            <div class="note-text">Asterisk <span class="red">*</span> indicates a required field</div>
+            <div class="form-data float-left">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>First Name:<span class="red">*</span></td>
+                            <td><input type="text" name="firstName" required ng-model="users.instance.firstName" /></td>
+                            <td>Last Name:<span class="red">*</span></td>
+                            <td><input type="text" name="lastName" ng-model="users.instance.lastName" required /></td>
+                        </tr>
+                        <tr>
+                            <td>Email:<span class="red">*</span></td>
+                            <td><input type="text" name="email" ng-model="users.instance.email" required /></td>
+                            <td>Contract Phone:<span class="red">*</span></td>
+                            <td><input type="text" name="contractPhone" ng-model="users.instance.contractPhone" required /></td>
+                        </tr>
+                        <tr>
+                            <td>Date of Birth:<span class="red">*</span></td>
+                            <td><input type="text" name="dateOfBirth" required ng-model="users.instance.dateOfBirth" /></td>
+                            <td>Country:<span class="red">*</span></td>
+                            <td>
+                                <select required class="select-sort" ng-options="item.id as item.name for item in selectCountrys" ng-model="users.instance.country"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Street Address<span class="red">*</span></td>
+                            <td colspan="3" ><input type="text" class="input-long" name="streetAddress" ng-model="users.instance.streetAddress" required /></td>
+
+                        </tr>
+                        <tr>
+                            <td>City:<span class="red">*</span></td>
+                            <td><input type="text" ng-model="users.instance.city" required name="city" /></td>
+                            <td>State:<span class="red">*</span></td>
+                            <td>
+                                <select required class="select-sort" ng-options="item.id as item.name for item in selectStates" ng-model="users.instance.state"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Zip Code:<span class="red">*</span></td>
+                            <td><input type="text" name="zipCode" ng-model="users.instance.zipCode" required /></td>
+                            <td>Default Map:<span class="red">*</span></td>
+                            <td>
+                                <select>
+                                    <option> Satellite</option>
+                                    <option> Satellite</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Time Zone:<span class="red">*</span></td>
+                            <td>
+                                <select>
+                                    <option> (UTC+07:00) Bangkok, HaNoi,Jakarta</option>
+                                    <option> (UTC+07:00) Bangkok, HaNoi,Jakarta</option>
+                                </select>
+                            </td>
+                            <td><label class="button" for="daylight_saving">Daylight Saving:<span class="red">*</span></label></td>
+                            <td><label><input class="button" id="daylight_saving" type="checkbox" ng-model="users.instance.daylightSaving" required /></label></td>
+                        </tr>
+                        <tr>
+                            <td>User role:<span class="red">*</span></td>
+                            <td>
+                                <select>
+                                    <option> BHPH (Main.)</option>
+                                    <option> BHPH (Main.)</option>
+                                </select>
+                            </td>
+                            <td>Unit System:<span class="red">*</span></td>
+                            <td>
+                                <select>
+                                    <option> Imperial</option>
+                                    <option> Imperial</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Group:<span class="red">*</span></td>
+                            <td>
+                                <select>
+                                    <option> None</option>
+                                    <option> None</option>
+                                </select>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Username:<span class="red">*</span></td>
+                            <td><input type="text" name="userName" required ng-model="users.instance.userName"/></td>
+                            <td>Time of Day Format:<span class="red">*</span></td>
+                            <td>
+                                <select>
+                                    <option> Civilian Time</option>
+                                    <option> Civilian Time</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Password:<span class="red">*</span></td>
+                            <td><input  type="{{showpassword ? 'text' : 'password'}}" name="password" ng-model="users.instance.password" required /></td>
+                            <td>Confirm Password:<span class="red">*</span></td>
+                            <td><input type="password" name="confirmPassword"  required /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="button" for="show_password">Show password:<span class="red">*</span></label></td>
+                            <td><label ><input class="button" id="show_password" type="checkbox" ng-model="showpassword" /></label></td>
+                            <td><input type="button" value="Save" class="save-button float-right button" ng-click="updatedUser()"/>
+                                <input type="button" value="Cancel" class="cancel-button float-right button" ng-click="backIndexUsersFadeIn()"/></td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="float-right permission">
+                <div class="per_des" >Permissions</div>
+                <div ng-include="'views/users/_form_permission.html'"></div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>

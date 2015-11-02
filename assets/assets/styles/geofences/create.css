@@ -1,0 +1,150 @@
+.create-geofences-container {
+    background-image: url("../../images/add_new_geofence_back.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 1078px;
+    height: 560px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.create-geofences-container .geofences-header {
+    width: 100%;
+    min-height: 50px;
+}
+.create-geofences-container .geofences-header .title {
+    float: right;
+    width: 978px;
+    height: 50px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    color: #FFF;
+}
+.create-geofences-container .geofences-header .close {
+    background-image: url("../../images/close.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    float: right;
+    width: 50px;
+    height: 50px;
+    margin-top: 0px;
+    margin-right: -40px;
+}
+.create-geofences-container .geofences-body .toolbar {
+    font-size: 14px;
+}
+.create-geofences-container .geofences-body .toolbar .search input {
+    height: 17px;
+}
+.create-geofences-container .geofences-body .contain table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-left: 20px;
+}
+.create-geofences-container .geofences-body .contain {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 400px;
+}
+.create-geofences-container .geofences-body .contain table .device-avatar {
+    width: 120px;
+    height: 88px;
+}
+.create-geofences-container .geofences-body .contain table .left {
+    line-height: 26px;
+}
+.create-geofences-container .geofences-body .contain table .cancel-btn {
+    background-image: url("../../images/cancel_button_back.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius:4px;
+    color: #FFF;
+    display: inline-block;
+}
+.create-geofences-container .geofences-body .contain table .ok-btn {
+    background-image: url("../../images/ok_button_back.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius:4px;
+    color: #FFF;
+    display: inline-block;
+}
+.create-geofences-container .geofences-body .contain table .map_canvas {
+    width: 100%;
+    height: 100%;
+}
+.create-geofences-container .geofences-body .contain table input[type=text] {
+    border: 2px solid #F3F3ED;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    width:120px;
+    height:20px;
+    font-size: 15px;
+    padding: 5px;
+    color: #A0A0A0;
+}
+.create-geofences-container .geofences-body .contain table select {
+    border: 2px solid #F3F3ED;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    height:34px;
+    font-size: 13px;
+    padding: 5px;
+    color: #A0A0A0;
+}
+.create-geofences-container .geofences-body .contain table input[type=checkbox] {
+    border: 2px solid #F3F3ED;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    font-size: 15px;
+    padding: 5px;
+    color: #A0A0A0;
+}
+.create-geofences-container .geofences-body .contain table {
+    color: #A0A0A0;
+}
+.create-geofences-container .geofences-body .contain table .map-toolbar {
+    width: 24px;
+    text-align: center;
+    margin-left: 264px;
+    margin-top: 5px;
+    z-index: 10;
+    position: absolute;
+}
+.create-geofences-container .geofences-body .contain table .map {
+    width: 40%;
+}
+.create-geofences-container .geofences-body .contain table label {
+    width: 100%;
+    text-align: right;
+    display: inline-block;
+}
+.create-geofences-container .geofences-body .contain table .label {
+    width: 20%;
+}
+.create-geofences-container .geofences-body .contain table table {
+    margin-left: 0px;
+}

@@ -1,0 +1,154 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.clear {
+    clear: both;
+}
+.button:hover {
+    cursor: pointer;
+}
+.float-right{
+    float: right;
+}
+.float-left{
+    float: left;
+}
+.red{
+    color: red;
+}
+.user-container {
+    background-image: url("../../images/users/user_back.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0 0 60px 0;
+    width: 1101px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 279px;
+}
+
+/*header*/
+.user-container .user-header {
+    width: 100%;
+    height: 73px;
+    position: relative;
+}
+.user-container .user-header .title {
+    padding-top: 25px;
+    text-align: center;
+    font-size: 25px;
+    color: #FFF;
+}
+.user-container .user-header .close {
+    background-image: url("../../images/users/close.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+/*end header*/
+
+/*menu */
+.user-body .contain-menu{
+    padding-left: 30px;
+    font-size: 14px;
+}
+.user-body .contain-menu .user_admin{
+    margin-top: -20px;
+    float: left;
+    width: 35%;
+    height: 80px;
+}
+
+.user-body .contain-menu .user_rt_search{
+    float: right;
+    width: 55%;
+    padding-right: 5%;
+    height: 55px;
+    padding-top: 30px;
+}
+.user-body .contain-menu .user_rt_search input{
+    height: 14px;
+    padding: 5px;
+    color: #A0A0A0;
+    width: 100px;
+}
+.user-body .contain-menu .user_rt_search img{
+    height: 28px;
+}
+
+
+/*end menu*/
+
+/*contain-report*/
+.user-container .user-body .contain-report{
+    margin-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+.user-container .user-body .contain-report table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+.user-container .user-body .contain-report table thead{
+    color:#FFFFFF;
+    line-height: 30px;
+}
+.user-container .user-body .contain-report table tbody{
+    display: block;
+    height: 96px;
+    overflow-y: auto;
+}
+.user-container .user-body .contain-report table td{
+    border: 1.5px dashed #F3F3ED ;
+    text-align: center;
+    padding-bottom: 5px;
+    color: #A0A0A0;
+    width: 144px;
+}
+.user-container .user-body .contain-report table thead tr{
+    height: 30px;
+    display: block;
+    border: 2px solid #F3F3ED;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    background-color: #02194f;
+
+}
+.user-container .user-body .contain-report table thead th{
+    width: 142px;
+}
+.user-container .user-body .contain-report table .action-edit{
+    background-image: url("../../images/users/edi_icon.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+.user-container .user-body .contain-report table .action-delete{
+    background-image: url("../../images/users/delete.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    padding-right: 15px;
+}
+.user-container .user-body .contain-report table .action-edit:hover {
+    background-image: url("../../images/users/edit_icon_hover.png");
+    background-repeat: no-repeat;
+}
+.user-container .user-body .contain-report table .action-delete:hover {
+    background-image: url("../../images/users/delete_hover.png");
+    background-repeat: no-repeat;
+}
+/*end contain-report*/
+
+
+
+

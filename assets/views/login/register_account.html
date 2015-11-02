@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="protekgps">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Account</title>
+    <link rel="stylesheet" type="text/css"  href="../../assets/styles/application.css">
+    <link rel="stylesheet" type="text/css"  href="../../assets/styles/login/register-account.css">
+    <script type="text/javascript" src="../../assets/js/lib/angular.min.js"></script>
+    <script type="text/javascript" src="../../controllers/login/register_account.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=myCallBack&render=explicit" async defer></script>
+
+</head>
+<body>
+
+    <div ng-controller="RegisterAccountController" class="main-register">
+        <div id="register-new-account" ng-show="actionAccount == 'new_account'" ng-include="'../../views/login/form_new_account.html'" ></div>
+        <div id="register-exist-account" ng-show="actionAccount == 'existing_account'" ng-include="'../../views/login/form_exist_account.html'" ></div>
+    </div>
+
+
+
+    <script>
+        var recaptcha_new_account;
+        var recaptcha_exist_account;
+        var myCallBack = function() {
+            //Render the recaptcha_new_account on the element with ID "recaptcha_new_account"
+            recaptcha_new_account = grecaptcha.render('recaptcha_new_account', {
+                'sitekey' : '6Lc_0f4SAAAAAF9ZA_d7Dxi9qRbPMMNW-tLSvhe6',
+                'theme' : 'light'
+            });
+
+            //Render the recaptcha_exist_account on the element with ID "recaptcha_exist_account"
+            recaptcha_exist_account = grecaptcha.render('recaptcha_exist_account', {
+                'sitekey' : '6Lc_0f4SAAAAAF9ZA_d7Dxi9qRbPMMNW-tLSvhe6',
+                'theme' : 'light'
+            });
+        };
+    </script>
+</body>
+</html>

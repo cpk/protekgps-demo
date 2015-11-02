@@ -1,0 +1,137 @@
+.edit-devices-container {
+    background-image: url("../../images/edit_device_back.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 1078px;
+    height: 500px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.edit-devices-container .devices-header {
+    width: 100%;
+    min-height: 50px;
+}
+.edit-devices-container .devices-header .title {
+    float: right;
+    width: 1028px;
+    height: 50px;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 25px;
+    color: #FFF;
+}
+.edit-devices-container .devices-header .close {
+    background-image: url("../../images/close.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    float: right;
+    width: 50px;
+    height: 50px;
+    margin-top: 0px;
+    margin-right: -40px;
+}
+.edit-devices-container .devices-body .toolbar {
+    font-size: 13px;
+}
+.edit-devices-container .devices-body .toolbar .search input {
+    height: 17px;
+}
+.edit-devices-container .devices-body .contain table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-left: 20px;
+}
+.edit-devices-container .devices-body .contain {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 340px;
+}
+.edit-devices-container .devices-body .contain table .device-avatar {
+    width: 120px;
+    height: 88px;
+}
+.edit-devices-container .devices-body .contain table .left {
+    line-height: 26px;
+}
+.edit-devices-container .devices-body .contain table .cancel-btn {
+    background-image: url("../../images/cancel_button_back.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius:4px;
+    color: #FFF;
+    display: inline-block;
+}
+.edit-devices-container .devices-body .contain table .ok-btn {
+    background-image: url("../../images/ok_button_back.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius:4px;
+    color: #FFF;
+    display: inline-block;
+}
+.edit-devices-container .devices-body .contain table .map_canvas {
+    width: 100%;
+    height: 100%;
+}
+.edit-devices-container .devices-body .contain table input[type=text] {
+    border: 2px solid #F3F3ED;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    width:120px;
+    height:20px;
+    font-size: 14px;
+    padding: 5px;
+    color: #A0A0A0;
+}
+.edit-devices-container .devices-body .contain table select {
+    border: 2px solid #F3F3ED;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    height:34px;
+    font-size: 13px;
+    padding: 5px;
+    color: #A0A0A0;
+}
+.edit-devices-container .devices-body .contain table {
+    color: #A0A0A0;
+}
+.edit-devices-container .devices-body .contain table .map {
+    width: 40%;
+}
+.edit-devices-container .devices-body .contain table label {
+    width: 100%;
+    text-align: right;
+    display: inline-block;
+}
+.edit-devices-container .devices-body .contain table .label {
+    width: 20%;
+}
+.edit-devices-container .devices-body .contain table table {
+    margin-left: 0px;
+}
+.edit-devices-container .devices-body .contain table input[type=text]{
+    width: 220px;
+}
+.edit-devices-container .devices-body .contain table select{
+    width: 110px;
+}

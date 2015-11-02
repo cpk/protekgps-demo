@@ -1,0 +1,134 @@
+.show-geofences-container {
+    background-image: url("../../images/add_new_geofence_back.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 1072px;
+    height: 476px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.show-geofences-container .geofences-header {
+    width: 100%;
+    min-height: 50px;
+}
+.show-geofences-container .geofences-header .title {
+    float: right;
+    width: 978px;
+    height: 50px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    color: #FFF;
+}
+.show-geofences-container .geofences-header .close {
+    background-image: url("../../images/close.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    float: right;
+    width: 50px;
+    height: 50px;
+    margin-top: 0px;
+    margin-right: -40px;
+}
+
+.show-geofences-container .geofences-body .contain {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 390px;
+}
+
+.show-geofences-container .geofences-body .contain .contain-left{
+  width: 38%;
+  padding-right: 10px;
+}
+.show-geofences-container .geofences-body .contain .contain-left .device-info{
+  padding-bottom: 10px;
+}
+.show-geofences-container .geofences-body .contain .contain-left .device-info .show-img{
+  padding-bottom: 10px;
+}
+.show-geofences-container .geofences-body .contain .contain-left .device-info .show-img img{
+  width: 130px;
+  height: 70px;
+}
+.show-geofences-container .geofences-body .contain .contain-left .list-geofence{
+  /*overflow: scroll;*/
+  overflow-x: hidden;
+  max-height: 240px;
+}
+.show-geofences-container .geofences-body .contain .contain-right{
+  width: 60%;
+  padding-right: 5px;
+}
+
+.show-geofences-container .geofences-body .contain .contain-left table{
+  border-collapse: collapse;
+  min-width: 395px;
+}
+.show-geofences-container .geofences-body .contain .contain-left table tr{
+  border-top: 1px solid;
+}
+
+.show-geofences-container .geofences-body .contain .contain-left table label{
+  font-size: 13px;
+  font-weight: bold;
+}
+.show-geofences-container .geofences-body .contain .contain-left table span.text{
+  font-size: 13px;
+  color: rgba(26, 36, 54, 0.75);
+}
+.show-geofences-container .geofences-body .contain .contain-left table tbody tr:hover{
+  background-color: #0c8da0;
+}
+.show-geofences-container .geofences-body .contain .group-button{
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 10px;
+  font-size: 13px;
+}
+.show-geofences-container .geofences-body .contain .group-button .cancel-btn {
+  background-image: url("../../images/cancel_button_back.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: transparent;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius:4px;
+  color: #FFF;
+  display: inline-block;
+}
+.show-geofences-container .geofences-body .contain .group-button .button {
+  background-image: url("../../images/cancel_button_back.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: transparent;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius:4px;
+  color: #FFF;
+  display: inline-block;
+  text-align: center;
+}
+.show-geofences-container .geofences-body .contain .group-button .button:hover {
+  background-image: url("../../images/ok_button_back.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: transparent;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius:4px;
+  color: #FFF;
+  display: inline-block;
+  text-align: center;
+}
+

@@ -1,0 +1,55 @@
+.share-devices-container {
+    background-image: url("../../images/administration.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 480px;
+    min-height: 300px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.share-devices-container .share-devices-header {
+    width: 100%;
+    min-height: 50px;
+}
+.share-devices-container .share-devices-header .title {
+    float: right;
+    width: 470px;
+    height: 50px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 25px;
+    color: #FFF;
+}
+.share-devices-container .share-devices-header .close {
+    background-image: url("../../images/close.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    float: right;
+    width: 50px;
+    height: 50px;
+    margin-top: -10px;
+    margin-right: -40px;
+}
+.share-devices-container .alerts-body .contain {
+    display: block;
+    height: 470px;
+    width: 470px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.share-devices-container .share-devices-body .contain table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.share-devices-container .share-devices-body .contain table td:first-child {
+    width: 40%;
+    text-align: right;
+}
+.share-devices-container .share-devices-body .contain table td:last-child {
+    width: 60%;
+    text-align: left;
+}

@@ -1,0 +1,264 @@
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(160,160,160,0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(160,160,160,0.4);
+}
+.clear {
+    clear: both;
+}
+.button:hover {
+    cursor: pointer;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.i-admin-btn {
+    background-image: url("../images/back_admin_button.png");
+    background-repeat: no-repeat;
+    width: 140px;
+    height: 77px;
+    display: inline-block;
+    line-height: 85px;
+    color: #FFF;
+}
+.i-admin-btn img {
+    background-color: #FFF;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-top: 12px;
+    margin-left: 12px;
+    margin-right: 10px;
+    float: left;
+}
+.i-admin-btn:hover {
+    background-image: url("../images/back_admin_button_hover.png");
+    background-repeat: no-repeat;
+}
+.i-add-btn {
+    background-image: url("../images/add_button.png");
+    background-repeat: no-repeat;
+    width: 168px;
+    height: 77px;
+    display: inline-block;
+    line-height: 85px;
+    padding-left: 10px;
+    color: #FFF;
+}
+.i-add-btn:hover {
+    background-image: url("../images/add_button_hover.png");
+    background-repeat: no-repeat;
+}
+.i-delete-btn {
+    background-image: url("../images/delete_button.png");
+    background-repeat: no-repeat;
+    width: 178px;
+    height: 77px;
+    display: inline-block;
+    line-height: 80px;
+    padding-left: 10px;
+    color: #FFF;
+}
+.i-delete-btn:hover {
+    background-image: url("../images/delete_button_hover.png");
+    background-repeat: no-repeat;
+}
+.i-edit {
+    background-image: url("../images/edit_icon.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 41px;
+    display: inline-block;
+}
+.i-edit:hover {
+    background-image: url("../images/edit_icon_hover.png");
+    background-repeat: no-repeat;
+}
+.i-delete {
+    background-image: url("../images/delete_icon.png");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 41px;
+    display: inline-block;
+}
+.i-delete:hover {
+    background-image: url("../images/delete_icon_hover.png");
+    background-repeat: no-repeat;
+}
+.i-back-alerts-btn {
+    background-image: url("../images/back_alerts_button.png");
+    background-repeat: no-repeat;
+    width: 108px;
+    height: 77px;
+    display: inline-block;
+    line-height: 80px;
+    padding-left: 70px;
+    color: #FFF;
+}
+.i-back-alerts-btn:hover {
+    background-image: url("../images/back_alerts_button_hover.png");
+    background-repeat: no-repeat;
+}
+.i-back-devices-btn {
+    background-image: url("../images/back_devices_button.png");
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 77px;
+    display: inline-block;
+    line-height: 85px;
+    padding-left: 75px;
+    color: #FFF;
+}
+.i-back-devices-btn:hover {
+    background-image: url("../images/back_devices_button_hover.png");
+    background-repeat: no-repeat;
+}
+.i-search {
+    background-image: url("../images/search_icon.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 27px;
+    height: 23px;
+}
+.i-add-new-devices {
+    background-image: url("../images/add_new_devices_button.png");
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 26px;
+    display: inline-block;
+    line-height: 26px;
+    padding-left: 30px;
+    color: #FFF;
+}
+.i-add-new-anothers {
+    background-image: url("../images/add_new_anothers_button.png");
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 26px;
+    display: inline-block;
+    line-height: 26px;
+    padding-left: 30px;
+    color: #FFF;
+}
+.i-back-geofences-btn {
+    background-image: url("../images/back_geofences_button.png");
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 77px;
+    display: inline-block;
+    line-height: 85px;
+    padding-left: 85px;
+    color: #FFF;
+}
+.i-back-geofences-btn:hover {
+    background-image: url("../images/back_geofences_button_hover.png");
+    background-repeat: no-repeat;
+}
+.required {
+    color: red;
+}
+.center {
+    text-align: center;
+}
+.hidden {
+    display: none;
+    position:absolute;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.absolute {
+    position:absolute !important;
+}
+.map-main {
+    margin-top: 120px;
+}
+.hidden-level2 {
+    display: none;
+    position:absolute;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.i-geofence-erase {
+    background-image: url("../images/erase-icon.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-color: #FFF;
+    border-radius:3px;
+}
+.i-first-page, .i-last-page {
+    width: 50px;
+    height: 25px;
+    border-radius:3px;
+    background-color: #E6E6E6;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 2px;
+    color: #A0A0A0;
+    display: block;
+    float: right;
+    line-height: 25px;
+}
+.i-first-page:hover, .i-last-page:hover {
+    background-color: #CFCFCF;
+}
+.i-preview-page, .i-number-page, .i-next-page {
+    width: 25px;
+    height: 25px;
+    border-radius:3px;
+    background-color: #E6E6E6;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 2px;
+    color: #A0A0A0;
+    display: block;
+    float: right;
+    line-height: 25px;
+}
+.i-preview-page:hover, .i-number-page:hover, .i-next-page:hover {
+    background-color: #CFCFCF;
+}
+.i-current-page {
+    width: 25px;
+    height: 25px;
+    border-radius:3px;
+    background-color: #7ACC7A;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 2px;
+    color: #A0A0A0;
+    display: block;
+    float: right;
+    line-height: 25px;
+}
+.i-current-page:hover {
+    background-color: #6BB26B;
+}
+.i-sort {
+    display: block;
+    width: 15px;
+    text-align: center;
+}

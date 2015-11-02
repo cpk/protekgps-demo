@@ -1,0 +1,24 @@
+
+    <link rel="stylesheet" type="text/css"  href="assets/styles/share/devices.css">
+
+    <div class="share-devices-container">
+        <div class="share-devices-header">
+            <div class="close button"  ng-click="listDevicesFadeOut()"></div>
+            <div class="title">List Devices</div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="share-devices-body">
+            <div class="contain">
+                <table>
+                    <tr ng-repeat="device in listDevices">
+                        <td>
+                            <input type="checkbox" ng-checked="isCheckedDevice(device.id)" value="{{device.id}}" ng-model="checkedDevice" ng-click="checkDevice(device.id, checkedDevice)"/>
+                        </td>
+                        <td>{{device.name}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>

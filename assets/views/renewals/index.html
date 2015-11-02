@@ -1,0 +1,70 @@
+
+<link rel="stylesheet" type="text/css" href="assets/styles/application.css">
+<link rel="stylesheet" type="text/css" href="assets/styles/renewals/renewal.css">
+
+<div class="renewal-container">
+    <div class="renewal-header">
+        <div class="close button" ng-click="indexRenewalsFadeOut()"></div>
+        <div class="title">Renewal</div>
+    </div>
+    <div class="renewal-body">
+        <div class="contain-menu">
+            <div class="ren_admin">
+                <div class="float-left padding-left-10" ng-click="backAdminFadeIn()">
+                <span class="i-admin-btn button">
+                    <img src="assets/images/avatars/man.png">
+                    Admin
+                </span>
+                </div>
+                <div  class="right float-left button" ng-click="renewalsHistoryFadeIn()">Renewal History</div>
+            </div>
+            <div class="ren_des">
+                Please review your divice renewals, enter your <br />
+                payment information, and click confirm.
+            </div>
+            <div class="ren_rt_search">
+                <input type="text" placeholder="Search" class="float-right"/>
+                <img src="assets/images/renewals/search_icon.png" class="float-right" />
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="contain-filter">
+            <input type="text" placeholder="Name, Serial Number" ng-model="search.$" />
+            <select ng-options="item.id as item.name for item in selectDevices" ng-model="search.renewing"></select>
+            <select ng-options="item.name for item in selectDataAccounts track by item.id" ng-model="selectedDataAccount"></select>
+        </div>
+        <div class="clear"></div>
+        <div class="contain-report">
+            <table >
+                <thead>
+                <tr >
+                    <th scope="col" class="button" ng-click="sortClick('renewal.name')">Name<span ng-bind-html="sort.type" ng-if="sort.field == 'renewal.name'"></span></th>
+                    <th scope="col" class="button" ng-click="sortClick('renewal.serial_number')">Serial Number<span ng-bind-html="sort.type" ng-if="sort.field == 'renewal.serial_number'"></span></th>
+                    <th scope="col" class="button" ng-click="sortClick('renewal.date_activated')">Date Activated<span ng-bind-html="sort.type" ng-if="sort.field == 'renewal.date_activated'"></span></th>
+                    <th scope="col" class="button" ng-click="sortClick('renewal.device_expiration')">Device Expiration<span ng-bind-html="sort.type" ng-if="sort.field == 'renewal.device_expiration'"></span></th>
+                    <th scope="col" class="button" ng-click="sortClick('renewal.last_renewal')">Last Renewal<span ng-bind-html="sort.type" ng-if="sort.field == 'renewal.last_renewal'"></span></th>
+                    <th scope="col" class="button" ng-click="sortClick('renewal.renewal_period')">Renewal Period<span ng-bind-html="sort.type" ng-if="sort.field == 'renewal.renewal_period'"></span></th>
+                    <th scope="col" class="button" ng-click="sortClick('renewal.amount')">Amount<span ng-bind-html="sort.type" ng-if="sort.field == 'renewal.amount'"></span></th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr ng-repeat="instance in (renewals.filteritems = (renewals.listInstance | filter:search))">
+                    <td>{{instance.name}}</td>
+                    <td>{{instance.serial_number}}</td>
+                    <td>{{instance.date_activated}}</td>
+                    <td>{{instance.device_expiration}}</td>
+                    <td>{{instance.last_renewal}}</td>
+                    <td>
+                        <select ng-model="instance.renewal_period" ng-options="child.id as child.name for child in selectDataYear" ></select>
+                    </td>
+                    <td>{{instance.amount| currency}}</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="renewal-renew-pay float-right button" ng-click="renewalsSummaryFadeIn()">Renew and Pay</div>
+    </div>
+    <div class="clear"></div>
+</div>
